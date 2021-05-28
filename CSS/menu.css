@@ -32,7 +32,7 @@
 
 /*Hamburger Lines*/
 /* Middle Line*/
-.menu-wrap .hamburger > div {
+.menu-wrap .hamburger>div {
   position: relative;
   width: 100%;
   height: 2px;
@@ -43,8 +43,9 @@
   justify-content: center;
   transition: all 0.4s ease;
 }
+
 /* Top and bottom style*/
-.menu-wrap .hamburger > div:before,.menu-wrap .hamburger > div:after {
+.menu-wrap .hamburger>div:before, .menu-wrap .hamburger>div:after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -53,45 +54,47 @@
   height: 2px;
   background: inherit;
 }
+
 /*Bottom Position*/
-.menu-wrap .hamburger > div:after {
+.menu-wrap .hamburger>div:after {
   top: 10px;
 }
 
 /*Toggling Animation*/
-.menu-wrap .toggler:checked +.hamburger > div {
+.menu-wrap .toggler:checked+.hamburger>div {
   transform: rotate(-45deg);
 }
+
 /*Transform Lines into an X*/
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
+.menu-wrap .toggler:checked+.hamburger>div:before,
+.menu-wrap .toggler:checked+.hamburger>div:after {
   top: 0;
   transform: rotate(90deg);
 }
 
 /* hover animations*/
-.menu-wrap .toggler:checked:hover +.hamburger > div {
+.menu-wrap .toggler:checked:hover+.hamburger>div {
   transform: rotate(225deg);
 }
 
 /*Show Menu */
-.menu-wrap .toggler:checked  ~ .menu {
+.menu-wrap .toggler:checked~.menu {
   visibility: visible;
   /*z-index: 2;*/
 }
 
-
-.menu-wrap .toggler:checked  ~ .menu > div {
+.menu-wrap .toggler:checked~.menu>div {
   transform: scale(1);
   transition-duration: var(--menu-speed);
   /*z-index: 2;*/
 }
 
-.menu-wrap .toggler:checked ~ .menu > div > div {
+.menu-wrap .toggler:checked~.menu>div>div {
   opacity: 1;
   transition: opacity 0.4s ease;
   /*z-index: 2;*/
 }
+
 /* Menu */
 .menu-wrap .menu {
   position: fixed;
@@ -104,11 +107,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
-.menu-wrap .menu > div {
+.menu-wrap .menu>div {
   background: var(--overlay-color);
   border-radius: 50%;
   width: 200vw;
@@ -121,7 +122,7 @@
   transition: all 0.4 ease;
 }
 
-.menu-wrap .menu > div > div {
+.menu-wrap .menu>div>div {
   text-align: center;
   max-width: 90vs;
   max-height: 100vh;
@@ -129,14 +130,14 @@
   transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.menu-wrap .menu>div>div>ul>li {
   list-style: none;
   color: #fff;
   font-size: 1.5rem;
   padding: 1rem;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.menu-wrap .menu>div>div>ul>li>a {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
