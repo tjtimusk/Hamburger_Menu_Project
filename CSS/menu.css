@@ -1,58 +1,58 @@
 .menu-wrap {
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 1;
 }
 
 .menu-wrap .toggler {
+  cursor: pointer;
+  height: 50px;
+  left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: 4;
-  cursor: pointer;
   width: 50px;
-  height: 50px;
-  opacity: 0;
+  z-index: 4;
 }
 
 .menu-wrap .hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
+  align-items: center;
   background: var(--primary-color);
   display: flex;
-  align-items: center;
+  height: 60px;
   justify-content: center;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  width: 60px;
+  z-index: 3;
 }
 
 /*Hamburger Lines*/
 /* Middle Line*/
 .menu-wrap .hamburger>div {
-  position: relative;
-  width: 100%;
-  height: 2px;
+  align-items: center;
   background-color: #FFF;
   display: flex;
   flex: none;
-  align-items: center;
+  height: 2px;
   justify-content: center;
+  position: relative;
   transition: all 0.4s ease;
+  width: 100%;
 }
 
 /* Top and bottom style*/
 .menu-wrap .hamburger>div:before, .menu-wrap .hamburger>div:after {
+  background: inherit;
   content: '';
+  height: 2px;
   position: absolute;
-  z-index: 1;
   top: -10px;
   width: 100%;
-  height: 2px;
-  background: inherit;
+  z-index: 1;
 }
 
 /*Bottom Position*/
@@ -97,43 +97,43 @@
 
 /* Menu */
 .menu-wrap .menu {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 
 .menu-wrap .menu>div {
+  align-items: center;
   background: var(--overlay-color);
   border-radius: 50%;
-  width: 200vw;
-  height: 200vh;
   display: flex;
   flex: none;
-  align-items: center;
+  height: 200vh;
   justify-content: center;
   transform: scale(0);
   transition: all 0.4 ease;
+  width: 200vw;
 }
 
 .menu-wrap .menu>div>div {
-  text-align: center;
-  max-width: 90vs;
   max-height: 100vh;
+  max-width: 90vs;
   opacity: 0;
+  text-align: center;
   transition: opacity 0.4s ease;
 }
 
 .menu-wrap .menu>div>div>ul>li {
-  list-style: none;
   color: #fff;
   font-size: 1.5rem;
+  list-style: none;
   padding: 1rem;
 }
 
